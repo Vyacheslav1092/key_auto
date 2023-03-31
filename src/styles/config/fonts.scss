@@ -1,0 +1,31 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    @each $f-format in ('eot', 'ttf', 'woff', 'woff2') {
+      src: url('#{$f-url}.#{$f-format}') format($f-format);
+    }
+    font-display: swap;
+  }
+}
+
+$way: '../fonts';
+
+@include font('Neue-400', normal, 400, '#{$way}/TTFirsNeue-Regular');
+@include font('Neue-500', normal, 500, '#{$way}/TTFirsNeue-Medium');
+@include font('Neue-600', normal, 600, '#{$way}/TTFirsNeue-DemiBold');
+
+
+/* hint
+100 - Thin (Hairline)
+200 - Extra Light (Ultra Light)
+300 - Light (Book)
+400 - Normal (Regular)
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)
+*/
+

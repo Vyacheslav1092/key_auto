@@ -1,0 +1,128 @@
+$url: "./..";
+
+// colors  -----------------------------------
+$white: #ffffff;
+$light-grey: #d1d3d4;
+$grey: #a7a9ac;
+$medium-grey: #6d6e71;
+$dark-grey: #4d4d4f;
+$graphite: #212322;
+$bright-red: #a50034;
+$red-bg: #cdbec4;
+
+
+// fonts -------------------------------------
+
+%font-400 {
+  font-family: "Neue-400", sans-serif;
+  font-weight: 400;
+}
+
+%font-500 {
+  font-family: "Neue-500", sans-serif;
+  font-weight: 500;
+}
+
+%font-600 {
+  font-family: "Neue-600", sans-serif;
+  font-weight: 600;
+}
+
+// typography --------------------------------
+.h1 {
+  @extend %font-500;
+  font-size: 50px;
+  line-height: 50px;
+
+  @media (max-width: 1440px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.h2 {
+  @extend %font-600;
+  font-size: 24px;
+  line-height: 30px;
+
+  @media (max-width: 1440px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.h3 {
+  @extend %font-600;
+  font-size: 20px;
+  line-height: 30px;
+
+  @media (max-width: 1440px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+// main element styles -----------------------
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  background: $graphite;
+  @extend %font-400;
+  color: $dark-grey;
+  font-size: 14px;
+  line-height: 24px;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: 476px) {
+    // max-width: 440px;
+  }
+
+  @media (min-width: 665px) {
+    // max-width: 620px;
+  }
+
+  @media (min-width: 892px) {
+    // max-width: 860px;
+  }
+
+  @media (min-width: 1100px) {
+    // max-width: 1170px;
+  }
+
+  @media (min-width: 1440px) {
+    // max-width: 1960px;
+    padding: 0;
+    max-width: unset;
+  }
+}
+
